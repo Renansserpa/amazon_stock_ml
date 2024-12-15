@@ -1,10 +1,15 @@
-# Nome do projeto
-Resumo breve do porquê o projeto existe, o que queremos resolver, e o que ele possui para isso.
+# Amazon Stock (ML)
+O projeto foi pensado para maximizar o ganho de uma ação em específico (No caso foi escolhida uma ação da Amazon) baseada em um modelo preditivo que visa prever o valor da ação em um período de 30 dias com umas variação de ±3%, que alimentará um dashboard com as principais informções e a predição.
+
+Para isso foi criada uma API para a coleta das informações da ação, após isso foi feita uma análise exploratória (EDA) com gráficos e com a geração de novos atributos que colaboraram para a geração do modelo.
 
 
 ## Configurações de ambiente
 ### Pré-requisitos:
+
 - [Python 3.9+](https://www.python.org)
+- [Google Chrome](https://www.google.com/intl/pt-BR/chrome/)
+- [Power BI](https://www.microsoft.com/pt-br/power-platform/products/power-bi/downloads)
 
 ### Instalação:
 As bibliotecas listadas em [requirements.txt](requirements.txt) devem estar instaladas.
@@ -38,5 +43,9 @@ Premissas que possam ser importantes, ou detalhes extras como por exemplo como a
 
 ## Contribuidores
 
-* Nomes aqui
+* Anderson Pereira - RM 
+* Gabriel Brites - RM 357307
+* Lucas Soares - RM 
+* Renan Serpa - RM 
+* Ruan Costa - RM 
 
