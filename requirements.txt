@@ -6,11 +6,7 @@ scipy
 matplotlib
 mplfinance
 
-
-# API
-fastapi
-sqlalchemy
-pydantic
-datetime
-jwt
-pwdlib
+# Modelos
+scikit-learn
+xgboost
+tensorflow
