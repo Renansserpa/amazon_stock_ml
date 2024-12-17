@@ -1,0 +1,12 @@
+# Analise Exploratória
+numpy 
+pandas
+seaborn
+scipy
+matplotlib
+mplfinance
+
+# Modelos
+scikit-learn
+xgboost
+tensorflow
