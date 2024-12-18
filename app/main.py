@@ -1,4 +1,3 @@
-from http import HTTPStatus
 from fastapi import FastAPI
 import auth, users, webscrapper
 

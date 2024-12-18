@@ -1,6 +1,7 @@
 import re
 import os
 from datetime import datetime
+import dotenv
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -74,15 +75,21 @@ def webscrapper(
     # Encerrar webdriver
     _Driver.quit()
 
-    # Identificar arquivo recém obtido da Nasdaq
+    # Identificar arquivo recém obtido da Nasdaq e armazenar seu nome de arquivo no sistema na variável NEW_NASDAQ_FILE do arquivo .env
     _NewNasdaqFile = ""
     with os.scandir(settings.DOWNLOAD_PATH) as _DownloadsFiles:
         for _File in _DownloadsFiles:
             if _Pattern.match(_File.name) and _File.name not in _NasdaqFiles:
-                _NewNasdaqFile = _File.name
+                dotenv_file = dotenv.find_dotenv()
+                dotenv.load_dotenv(dotenv_file)
+                os.environ["NEW_NASDAQ_FILE"] = _File.name
+                dotenv.set_key(dotenv_file, "NEW_NASDAQ_FILE", os.environ["NEW_NASDAQ_FILE"])
+
+    # Aguardar 15 segundos para concluir a atualização do arquivo .env em disco
+    time.sleep(15)
 
     # Carregar o conteúdo do arquivo recém obtido da Nasdaq
-    _NasdaqReportOnDisk = pd.read_csv(settings.DOWNLOAD_PATH+'/'+_NewNasdaqFile, names=['Date','Close/Last', 'Volume', 'Open', 'High', 'Low'])
+    _NasdaqReportOnDisk = pd.read_csv(settings.DOWNLOAD_PATH+'/'+settings.NEW_NASDAQ_FILE, names=['Date','Close/Last', 'Volume', 'Open', 'High', 'Low'])
 
     # Iniciar lista que conterá todas as linhas do arquivo recém obtido da Nasdaq
     _NasdaqReport = []

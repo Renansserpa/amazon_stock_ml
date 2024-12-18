@@ -12,3 +12,4 @@ class Settings(BaseSettings):
     ALGORITHM: str #Algoritmo para assinatura do token JWT
     ACCESS_TOKEN_EXPIRE_MINUTES: int #Tempo de expiração dos tokens JWT (em minutos)
     DOWNLOAD_PATH: str  #Caminho para o diretório padrão de Downloads a ser utilizado pelo WebScrapper
+    NEW_NASDAQ_FILE: str  # Arquivo de relatório da Nasdaq

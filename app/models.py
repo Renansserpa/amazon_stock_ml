@@ -8,7 +8,7 @@ table_registry = registry()
 
 @table_registry.mapped_as_dataclass
 class User:
-    # Através do SQWLAlchemy foi definido o modelo User, uma classe representando a tabela Users no Banco de Dados
+    # Através do SQLAlchemy foi definido o modelo User, uma classe representando a tabela Users no Banco de Dados
     #
     # Atributos:
     #   id: identificador do usuário no Banco de Dados (Primary Key)
