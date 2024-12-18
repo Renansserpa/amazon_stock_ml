@@ -3,6 +3,9 @@ O projeto foi pensado para maximizar o ganho de uma ação em específico (No ca
 
 Para isso foi criada uma API para a coleta das informações da ação, após isso foi feita uma análise exploratória (EDA) com gráficos e com a geração de novos atributos que colaboraram para a geração do modelo.
 
+### Link Video:
+- [Video Explicativo do Projeto](https://youtu.be/uNUNc3eC7l8)
+
 
 ## Configurações de ambiente
 ### Pré-requisitos:
